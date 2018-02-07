@@ -4,7 +4,7 @@ import slack.Slack
 Slack slack = new Slack();
 
 node('master'){
-    slack.slackNotification('start')
+    slack.sendNotification('start')
     stage('test'){
         echo "run tests"
         try {
@@ -20,6 +20,6 @@ node('master'){
     stage('build'){
         echo "run build"
     }
-    slack.slackNotification('ok')
+    slack.sendNotification('ok')
     
 }
