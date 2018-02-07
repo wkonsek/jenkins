@@ -21,4 +21,5 @@ node('master'){
         echo "run build"
     }
     slack.slackNotification('ok')
+    
 }
