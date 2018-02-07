@@ -8,9 +8,10 @@ node('master'){
     stage('test'){
         echo "run tests"
         try {
+            sh 'yum list installed | grep kernel'
             echo "inside the try statement"
         }
-        catch(Excpetion err) {
+        catch (Exception err) {
             slack.sendNotification('fail')
             currentBuild.result = 'FAILURE'
             throw error
