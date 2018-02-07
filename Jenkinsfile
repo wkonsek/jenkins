@@ -8,7 +8,7 @@ node('master'){
     stage('test'){
         echo "run tests"
         try {
-            sh 'yum list installed | grep kernel'
+            sh 'echo "Hello from the Docker"'
             echo "inside the try statement"
         }
         catch (Exception err) {
