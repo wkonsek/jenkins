@@ -28,8 +28,10 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        waitUntil() {
-          sh 'echo "deploying"'
+        script {
+          if ( true ) {
+            print env.CURRENT_DEV_BRANCH
+          }
         }
         
       }
