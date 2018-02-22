@@ -9,7 +9,10 @@ pipeline {
         
       }
       steps {
-        libraryResource '../../.envvars/environments.groovy'
+        script {
+          environment.set()
+        }
+        
       }
     }
     stage('Build') {
