@@ -10,7 +10,7 @@ pipeline {
       }
       steps {
         script {
-          env.set()
+          envs.set()
         }
         
       }
